@@ -1,0 +1,38 @@
+For the datebase we use MyPhpAdmin as our server for MotorPh Payroll System GUI.
+
+We name our database as "motorph_database", then we name our database table as "motorph_payrollusers" where in that our GUI can insert the data to the databse
+that validates the correct data for Login Page, Validation Page and Create new account page.
+
+We use this SQL command to create a column for motorph_payrollusers table. 
+
+CREATE TABLE motorph_payrollusers (
+    eid VARCHAR(50) NOT NULL,
+    role VARCHAR(50) NOT NULL,
+    fullname VARCHAR(100) NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    passDb VARCHAR(255) NOT NULL
+);
+
+For the Employee Data we use this command to create employeerecords, where in they the employee can view thier own data and the payroll
+staff can create new employee record.
+
+CREATE TABLE employeerecords (
+    EmployeeID VARCHAR(255) NOT NULL,
+    fullname VARCHAR(255) NOT NULL,
+    birthday VARCHAR(255) NOT NULL,
+    address TEXT NOT NULL,
+    contact VARCHAR(20) NOT NULL,
+    sss VARCHAR(20) NOT NULL,
+    pagibig VARCHAR(20) NOT NULL,
+    tin VARCHAR(20) NOT NULL,
+    philhealth VARCHAR(20) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    position VARCHAR(100) NOT NULL,
+    supervisor VARCHAR(255) NOT NULL,
+    basicsalary VARCHAR(255) NOT NULL,
+    ricesubsidy VARCHAR(255) NOT NULL,
+    phoneallowance VARCHAR(255) NOT NULL,
+    clothingallowance VARCHAR(255) NOT NULL,
+    grossrate VARCHAR(255) NOT NULL,
+    hourrate VARCHAR(255) NOT NULL,
+);
